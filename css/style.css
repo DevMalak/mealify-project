@@ -1,0 +1,1042 @@
+/*====================================== Reset================================= */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding: 80px 0;
+}
+
+body {
+  padding-top: 80px;
+}
+
+
+li {
+  list-style: none;
+}
+
+/*======================================================= navbar============================================== */
+
+.mealify-logo {
+  font-size: 45px;
+  font-weight: 700;
+  color: #37373f;
+  font-family: 'Open Sans', sans-serif;
+  padding: 5px 15px;
+  border: none;
+  display: inline;
+}
+
+.mealify-logo::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #f32424;
+  border-radius: 50%;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+/* Links */
+.navbar .nav-link {
+  position: relative;
+  font-size: 20px;
+  color: #7f7f90;
+  font-weight: 600;
+  transition: color 0.3s;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: #ce1212;
+  transition: width 0.4s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #37373f;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/*==================================================================End navbar=========================================*/
+
+/*================================================================= home section======================================= */
+
+.home-section {
+  background-color: #eeeeee;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home-title {
+  max-width: 629.14px;
+  font-size: 40px;
+  line-height: 82px;
+  font-family: 'Amatic SC', cursive;
+  color: #37373f;
+}
+
+/* paraghragh*/
+.home-desc {
+  max-width: 709px;
+  font-size: 20px;
+  line-height: 25px;
+  font-family: 'Open Sans', sans-serif;
+  color: #7f7f90;
+  margin: 30px 0;
+}
+
+/* book button  */
+.home-btn {
+  width: 135.72px;
+  height: 42px;
+  background-color: #e61414;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 0 30px 30px 30px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.video-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  color: #37373f;
+  font-size: 16px;
+  height: 55px;
+}
+.video-btn:hover{
+  color:#ce1212;
+}
+
+/* circul*/
+.play-icon {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.play-icon i {
+  font-size: 20px;
+  color: #808080;
+  z-index: 2;
+}
+
+
+.play-icon::before {
+  content: "";
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 6px solid #ce1212;
+  border-right-color:transparent;
+  border-bottom-color:transparent;
+  transform: rotate(-45deg);
+}
+
+.home-img {
+  width: 450px;
+  height: 450px;
+  transition: transform 0.05s;
+}
+
+.home-img:hover {
+  transform: rotate(-5deg) translateX(-5px); 
+}
+
+
+.home-title .line1 {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.home-title .line2 {
+  display: block;
+}
+
+h3 {
+  text-transform: none;
+}
+
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 400;
+}
+
+/*======================================================== End home section=================================================*/
+
+
+
+/*========================================================== chefs section===================================================*/
+
+.chef-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.chef-card:hover {
+  transform: translateY(-10px);
+}
+
+.chef-social {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.3rem;
+  border-radius: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+
+.chef-card:hover .chef-social {
+  opacity: 1;
+}
+
+
+.chef-social i {
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.chef-social i:hover {
+  color: #ff0000;
+}
+
+/* gallery section */
+.gallery-section {
+  background-color: #eeeeee; 
+  padding: 80px 0;
+}
+
+.text-black {
+  color: #000000;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.text-red {
+  color: #e61414;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.section-header h3 {
+  color: #7f7f90;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+.section-header h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 36px;
+  color: #e61414;
+  font-weight: 700;
+}
+
+
+/*========================================================End chefs section=============================================*/
+
+
+
+
+/*========================================================== Gallery Items=============================================== */
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  background: white;
+  padding: 3px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s;
+  border: 3px solid white;
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  transition: bottom 0.4s ease-in-out;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover .overlay-text {
+  bottom: 0;}
+
+  .overlay-text h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .overlay-text p {
+    font-size: 16px;
+    margin: 0;
+  }
+/*======================================================End gallery section==========================================*/
+
+
+/*========================================================= Contact Section===========================================  */
+
+  .contact-section {
+    background-color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    padding: 50px 20px;
+    box-sizing: border-box;
+  }
+
+  .contact-title-small {
+    font-size: 22px;
+    font-weight:none;
+    color: #7f7f96;
+    margin-bottom: 10px;
+  }
+
+  .contact-title-big {
+    font-size: 23px;
+    font-family: 'Amatic SC', cursive;
+    font-weight:none;
+  }
+
+  .contact-red {
+    color: #E61414;
+  }
+
+  /* Map */
+  .map-ratio {
+    height: 300px;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  /* Cards */
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    min-height: 100px;
+    margin-bottom: 15px;
+  }
+
+  .icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #E61414;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  /* Text */
+  .contact-card h5 {
+    margin: 0 0 5px 0;
+    font-weight: 600;
+  }
+
+  .contact-card p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  /* Form */
+  .contact-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .contact-form button {
+    background-color: #E61414;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+  
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+ 
+    display: block;
+   
+    margin: 15px auto 0 auto;
+
+    transition: background 0.3s;
+  }
+
+  .contact-form button:hover {
+    background-color: #c50f0f;
+  }
+/*=========================================================End contact section============================================*/
+
+/*===============================================================footer==================================================*/
+ .footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer h3 {
+  font-weight: bold;  
+  font-size: 25px;     
+  margin: 20px 0 10px;
+  text-align: left;    
+}
+
+.footer p {
+  font-weight: normal; 
+  font-size: 23px;     
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.footer .container {
+  width: 90%;
+  margin: auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 250px;
+}
+
+
+.footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer .logo img {
+  width: 40px;}
+
+.social-icons {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  justify-content: center; 
+  border-top: 1px solid #fff; 
+   margin-top: 15px; 
+   padding-top: 15px;
+}
+
+.social-icons li {
+  cursor: pointer;
+}
+
+.social-icons i {
+  font-size: 28px; 
+}
+
+
+.subscribe {
+  display: flex;
+  gap: 5px;
+}
+
+.subscribe input {
+  flex: 1;
+  padding: 10px;
+}
+
+.subscribe button {
+  background-color: #ce1212;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  width: 50%;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+
+.contact {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  margin-bottom: 10px;
+}
+
+.contact i {
+  color: #cc0606;
+  margin-right: 10px;
+}
+
+.footer-box:first-child {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  text-align: center;     
+}
+
+/*=============================================================End footer===================================*/
+
+
+/* ================================================================Dark mode toggle============================ */
+
+#darkMode {
+  display: none;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.theme-toggle label {
+  cursor: pointer;
+  font-size: 22px;
+  color: #37373f;
+}
+
+
+body:has(#darkMode:checked) .theme-toggle label {
+  color: #ffffff;
+}
+
+body:has(#darkMode:checked) {
+  background-color: #121212;
+  color: #ffffff;
+}
+body:has(#darkMode:checked) .navbar {
+  background-color: #171717 !important;
+}
+
+body:has(#darkMode:checked) .nav-link {
+  color: #9f9f9f;
+}
+
+body:has(#darkMode:checked) .nav-link:hover {
+  color: #ffffff;
+}
+
+body:has(#darkMode:checked) .mealify-logo {
+  color: #ffffff;
+}
+body:has(#darkMode:checked) .home-section {
+  background-color: #1e1e1e;
+}
+
+body:has(#darkMode:checked) .home-desc {
+  color: #b5b5b5;
+}
+body:has(#darkMode:checked) .chef-card,
+body:has(#darkMode:checked) .contact-card,
+body:has(#darkMode:checked) .contact-form {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+body:has(#darkMode:checked) input,
+body:has(#darkMode:checked) textarea {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+body:has(#darkMode:checked) .overlay-text {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+body:has(#darkMode:checked) .footer {
+  background-color: #000000;
+}
+body:has(#darkMode:checked) .theme-toggle i::before {
+  content: "\f185"; /* sun */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+/* ===== Gallery Dark ===== */
+body:has(#darkMode:checked) .gallery-section {
+  background-color: #1e1e1e;
+}
+
+
+body:has(#darkMode:checked) .section-header h3,
+body:has(#darkMode:checked) .section-header h2 {
+  color: #ffffff;
+}
+
+/* ===== Contact Dark ===== */
+body:has(#darkMode:checked) .contact-section {
+  background-color: #121212;
+}
+
+body:has(#darkMode:checked) .contact-title-small {
+  color: #b5b5b5;
+}
+
+body:has(#darkMode:checked) .contact-title-big {
+  color: #ffffff;
+}
+
+
+.icon-toggle {
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.sun-icon {
+  display: none;
+}
+
+body:has(#darkMode:checked) .moon-icon {
+  display: none;
+}
+
+body:has(#darkMode:checked) .sun-icon {
+  display: inline-block;
+}
+
+.icon-toggle i {
+  color: #37373f;
+}
+
+body:has(#darkMode:checked) .icon-toggle i {
+  color: #ffffff;
+}
+
+body:has(#darkMode:checked) .nav-link {
+  color: #9f9f9f;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+body:has(#darkMode:checked) .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 100%;
+  height: 2px;
+  background-color: #ff7f00; /* برتقالي */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* عند تمرير الماوس */
+body:has(#darkMode:checked) .nav-link:hover {
+  color: #ffffff; /* النص أبيض */
+}
+
+body:has(#darkMode:checked) .nav-link:hover::after {
+  opacity: 1; 
+}
+
+
+body:has(#darkMode:checked) .nav-link {
+  color: #9f9f9f;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+body:has(#darkMode:checked) .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #ff7f00; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+
+body:has(#darkMode:checked) .nav-link:hover {
+  color: #ffffff; 
+}
+
+body:has(#darkMode:checked) .nav-link:hover::after {
+  opacity: 1; 
+}
+
+.mealify-logo .dot {
+  color: #37373f; 
+  font-size: 22px;
+  margin-left: 6px;
+}
+
+body:has(#darkMode:checked) .mealify-logo::after { background-color: #ff7f00; }
+
+/* ===== Dark Mode Buttons ===== */
+
+/* Book button */
+body:has(#darkMode:checked) .home-btn {
+  background-color: #ff7f00; 
+  color: #ffffff;           
+}
+
+/* Video button */
+body:has(#darkMode:checked) .video-btn {
+  color: #ffffff; 
+}
+
+/* Play icon circle */
+body:has(#darkMode:checked) .play-icon {
+  background-color: #ffffff; 
+}
+
+/* Play icon arrow */
+body:has(#darkMode:checked) .play-icon i {
+  color: #000000;
+}
+
+/* Play icon arc */
+body:has(#darkMode:checked) .play-icon::before {
+  border: 6px solid #ff7f00; 
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  transform: rotate(-45deg);
+}
+
+
+/* Book button */
+body:has(#darkMode:checked) .home-btn {
+  background-color: #ff7f00; 
+  color: #ffffff;           
+  border: none;             
+}
+
+/* Home title */
+body:has(#darkMode:checked) .home-title {
+  color: #ffffff; 
+}
+
+h2.fw-normal span.text-danger {
+  color: #ff7f00 !important; 
+}
+
+
+body:has(#darkMode:checked) h2.fw-normal {
+  color: #ffffff !important; 
+}
+
+
+body:has(#darkMode:checked) h2.fw-normal span.text-danger {
+  color: #ff7f00 !important; 
+}
+
+/* Check */
+.section-header h2 .text-black {
+  color: #ffffff !important; 
+}
+
+/* Our Gallery */
+.section-header h2 .text-red {
+  color: #c17e1f !important; /* */
+}
+
+/* ===== Contact Titles ===== */
+
+/* Light Mode */
+.contact-title-big {
+  color: #000000; /* */
+}
+.contact-title-big .contact-red {
+  color: #E61414; /* */
+}
+
+/* Dark Mode */
+body:has(#darkMode:checked) .contact-title-big {
+  color: #ffffff !important; 
+}
+body:has(#darkMode:checked) .contact-title-big .contact-red {
+  color: #c17e1f !important; 
+}
+
+/* ===== Contact Icons ===== */
+
+/* Light Mode */
+.icon-circle {
+  background-color: #E61414; 
+  color: #ffffff;
+}
+
+/* Dark Mode */
+body:has(#darkMode:checked) .icon-circle {
+  background-color: #c17e1f !important; 
+  color: #ffffff;
+}
+
+/* ===== Contact Card Text ===== */
+
+body:has(#darkMode:checked) .contact-card p {
+  color: #ffffff !important;
+}
+
+/* ===== Send Message Button ===== */
+
+/* Light Mode */
+.contact-form button {
+  background-color: #c17e1f !important; 
+  color: #ffffff !important;           
+}
+
+/* Dark Mode */
+body:has(#darkMode:checked) .contact-form button {
+  background-color: #c17e1f !important; 
+  color: #ffffff !important;           
+}
+
+/* ===== Send Message Button ===== */
+
+/* Light Mode */
+.contact-form button {
+  background-color: #E61414 !important; 
+  color: #ffffff !important;          
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 20px;
+  display: block;
+  margin: 15px auto 0 auto;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #c50f0f; 
+}
+
+/* Dark Mode */
+body:has(#darkMode:checked) .contact-form button {
+  background-color: #c17e1f !important;
+  color: #ffffff !important;           
+}
+
+body:has(#darkMode:checked) .contact-form button:hover {
+  background-color: #a65f15; 
+}
+/* Map container */
+.map-ratio {
+  height: 300px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: transparent !important; 
+}
+
+.map-ratio iframe {
+  width: 100% !important;
+  height: 100% !important;
+  border: none !important;
+  display: block !important;
+}
+
+/* Dark Mode */
+body:has(#darkMode:checked) .map-ratio {
+  background-color: transparent !important;
+}
+
+/* ===== Subscribe Button ===== */
+
+/* Light Mode */
+.subscribe button {
+  background-color: #ce1212; 
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Dark Mode */
+body:has(#darkMode:checked) .subscribe button {
+  background-color: #c17e1f !important; 
+  color: #ffffff !important;
+}
+
+/* ===== Social Icons ===== */
+
+
+body:has(#darkMode:checked) .social-icons i {
+  color: #c17e1f !important;
+}
+
+
+/* Light Mode */
+.footer .contact i {
+  color: #cc0606;
+}
+
+/* Dark Mode */
+body:has(#darkMode:checked) .footer .contact i {
+  color: #c17e1f !important; 
+}
+
+/* ===== Subscribe Button ===== */
+
+/* Light Mode */
+.subscribe button {
+  background-color: #ce1212; 
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Dark Mode */
+body:has(#darkMode:checked) .subscribe button {
+  background-color: #c17e1f !important; 
+  color: #ffffff !important;
+}
+
+
+.video-btn {
+  color: #000000; 
+  transition: all 0.3s ease;
+}
+
+
+body:has(#darkMode:checked) .video-btn {
+  color: #ffffff; 
+  transition: all 0.3s ease;
+}
+
+
+body:has(#darkMode:checked) .video-btn:hover {
+  color: #c17e1f; 
+}
+
+
+.section-header h2 .text-black {
+  color: #000000 !important; 
+}
+
+body:has(#darkMode:checked) .section-header h2 .text-black {
+  color: #ffffff !important; 
+}
+
+
+.section-header h2 .text-danger {
+  color: #E61414 !important; 
+}
+
+body:has(#darkMode:checked) .section-header h2 .text-danger {
+  color: #ff7f00 !important; 
+}
+
+
+.section-header h2 .text-red {
+  color: #E61414 !important; 
+}
+
+body:has(#darkMode:checked) .section-header h2 .text-red {
+  color: #ff7f00 !important; 
+}
+
+/* =================================================End dark mode=========================== */
